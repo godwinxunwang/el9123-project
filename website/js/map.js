@@ -234,7 +234,7 @@ var expected_data_jsonstring = "[{\"state\":1,\"ViolentCrimesPerPop\":0.56623762
 var expected_data = JSON.parse(svr_data_jsonstring);
 var map_expected_data = [];
 
-for (var i=0; i<svr_data.length; i++) {
+for (var i=0; i<expected_data.length; i++) {
     var ele = expected_data[i];
     var rate = ele['ViolentCrimesPerPop'];
     var index = ele['state'].toString();
@@ -252,6 +252,227 @@ var expected_data_map = AmCharts.makeChart( "expected-data-map", {
     "dataProvider": {
         "map": "usaLow",
         "areas": map_linear_data
+    },
+
+    "areasSettings": {
+        "autoZoom": true
+    },
+    "valueLegend": {
+        "right": 10,
+        "minValue": "Low (0)",
+        "maxValue": "High (1)"
+    },
+    "export": {
+        "enabled": true
+    }
+});
+
+var nn_data = [
+    {
+        "index": 1,
+        "value": 0.484250901
+    },
+    {
+        "index": 2,
+        "value": 0.344583598
+    },
+    {
+        "index": 4,
+        "value": 0.373365739
+    },
+    {
+        "index": 5,
+        "value": 0.377625273
+    },
+    {
+        "index": 6,
+        "value": 0.385027604
+    },
+    {
+        "index": 8,
+        "value": 0.336162716
+    },
+    {
+        "index": 9,
+        "value": 0.302484775
+    },
+    {
+        "index": 10,
+        "value": 0.407527096
+    },
+    {
+        "index": 11,
+        "value": 0.900361481
+    },
+    {
+        "index": 12,
+        "value": 0.46097407
+    },
+    {
+        "index": 13,
+        "value": 0.661976344
+    },
+    {
+        "index": 16,
+        "value": 0.130910076
+    },
+    {
+        "index": 18,
+        "value": 0.40560222
+    },
+    {
+        "index": 19,
+        "value": 0.219596089
+    },
+    {
+        "index": 20,
+        "value": 0.365925305
+    },
+    {
+        "index": 21,
+        "value": 0.432139096
+    },
+    {
+        "index": 22,
+        "value": 0.68817448
+    },
+    {
+        "index": 23,
+        "value": 0.213503873
+    },
+    {
+        "index": 24,
+        "value": 0.786793187
+    },
+    {
+        "index": 25,
+        "value": 0.288336385
+    },
+    {
+        "index": 27,
+        "value": 0.492964024
+    },
+    {
+        "index": 28,
+        "value": 0.586245027
+    },
+    {
+        "index": 29,
+        "value": 0.348998511
+    },
+    {
+        "index": 32,
+        "value": 0.379021673
+    },
+    {
+        "index": 33,
+        "value": 0.153972948
+    },
+    {
+        "index": 34,
+        "value": 0.342040049
+    },
+    {
+        "index": 35,
+        "value": 0.371775134
+    },
+    {
+        "index": 36,
+        "value": 0.532024602
+    },
+    {
+        "index": 37,
+        "value": 0.439147011
+    },
+    {
+        "index": 38,
+        "value": 0.10605495
+    },
+    {
+        "index": 39,
+        "value": 0.468153252
+    },
+    {
+        "index": 40,
+        "value": 0.367476893
+    },
+    {
+        "index": 41,
+        "value": 0.289061743
+    },
+    {
+        "index": 42,
+        "value": 0.436758339
+    },
+    {
+        "index": 44,
+        "value": 0.253463252
+    },
+    {
+        "index": 45,
+        "value": 0.499070107
+    },
+    {
+        "index": 46,
+        "value": 0.149181252
+    },
+    {
+        "index": 47,
+        "value": 0.54643102
+    },
+    {
+        "index": 48,
+        "value": 0.392225973
+    },
+    {
+        "index": 49,
+        "value": 0.169612346
+    },
+    {
+        "index": 50,
+        "value": 0.222280593
+    },
+    {
+        "index": 51,
+        "value": 0.448696644
+    },
+    {
+        "index": 53,
+        "value": 0.323734343
+    },
+    {
+        "index": 54,
+        "value": 0.260755314
+    },
+    {
+        "index": 55,
+        "value": 0.338241481
+    },
+    {
+        "index": 56,
+        "value": 0.17172344
+    }
+];
+var map_nn_data = [];
+
+for (var i=0; i<nn_data.length; i++) {
+    var ele = nn_data[i];
+    var rate = ele['ViolentCrimesPerPop'];
+    var index = ele['state'].toString();
+    var state = relation[index]['name'];
+    map_nn_data.push({
+        'id': state,
+        'value': rate
+    })
+}
+
+var nn_data_map = AmCharts.makeChart( "nn-data-map", {
+    "type": "map",
+    "theme": "none",
+    "colorSteps": 100,
+    "dataProvider": {
+        "map": "usaLow",
+        "areas": map_nn_data
     },
 
     "areasSettings": {
