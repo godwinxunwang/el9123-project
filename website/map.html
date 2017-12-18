@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="xun" content="">
+    <title>NYC Data Analysis</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+
+    <link href="css/map.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-primary btn-large" href="index.html">Introduction</a>
+            <a class="btn btn-success btn-large" href="map.html">View result map</a>
+            <a class="btn btn-danger btn-large" href="chart.html">See data chart</a>
+            <a class="btn btn-info btn-large" href="https://github.com/godwinxunwang/el9123-project">GitHub repository</a>
+        </div>
+    </div>
+
+    <div class="row" style="padding: 2%">
+        <div class="col">
+            <h2>Results</h2>
+            <p>We have tried different approaches to predict crime rate, including using Multiple Linear Regression,
+                Support Vector Machine Regression, and Neural Networks. </p>
+            <p>Below are the result maps. For the ease of viewing the results, we have bundled them by state. If you would like
+                to see more detailed data, please go to this project's <a href="https://github.com/godwinxunwang/el9123-project">GitHub repository</a>. </p>
+        </div>
+    </div>
+
+    <div class="row" style="padding-left: 3%; padding-right: 3%">
+        <div id="accordion" role="tablist" style="width: 95%">
+            <div class="card">
+                <div class="card-header" role="tab" id="headingOne">
+                    <h5 class="mb-0">
+                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Actual Crime Rate Per State
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <div id="expected-data-map" style="width: 100%; height: 600px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="headingTwo">
+                    <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Predicted Crime Rate Per State - Linear Regression
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <div id="linear-data-map" style="width: 100%; height: 600px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="headingThree">
+                    <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Predicted Crime Rate Per State - Support Vector Machine Regression
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <div id="svr-data-map" style="width: 100%; height: 600px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="headingFour">
+                    <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseFour">
+                            Predicted Crime Rate Per State - Neutral Networks (2 layers: hidden and output)
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <div id="nn-data-map" style="width: 100%; height: 600px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding: 2%">
+        <div class="col">
+            <h2>Conclusion</h2>
+            <p>As you can see from the above, we used Multiple Linear Regression, Support Vector Machine Regression and Neural Networks
+            approaches to predict crime rate in U.S. communities. </p>
+            <p>Throughout the training process, we found many dominant factors, including the followings: (from the most dominant to less dominant)</p>
+            <ul>
+                <li>percentage of kids in family housing with two parents</li>
+                <li>percentage of kids born to never married</li>
+                <li>percentage of population that is caucasian</li>
+                <li>percentage of males who are divorced</li>
+                <li>percent of persons in dense housing</li>
+                <li>percentage of population that is african american</li>
+                <li>percentage of people living in areas classified as urban</li>
+                <li>percent of housing occupied</li>
+                <li>percentage of moms of kids under 18 in labor force</li>
+                <li>percent of vacant housing that is boarded up</li>
+                <li>percent of officers assigned to drug units</li>
+                <li>number of homeless people counted in the street </li>
+            </ul>
+            <p>Based on the above maps and detailed data, even though it's hard to predict the actual crime rate per community, we
+            still got a good amount of reasonable results. If we go into detail, we can also see that Support Vector Machine Regression
+            is the most robust approach among those techniques. Neural Networks approach seems not as robust as we expected. For more detailed
+            charts, please see our <a href="chart.html">data chart page</a>. </p>
+        </div>
+    </div>
+</div>
+<!-- Main Content -->
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/map.js"></script>
+</body>
+
+</html>

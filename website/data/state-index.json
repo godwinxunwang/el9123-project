@@ -1,0 +1,155 @@
+{
+  "1": {
+    "name": "US-AL"
+  },
+  "2": {
+    "name": "US-AK"
+  },
+  "4": {
+    "name": "US-AZ"
+  },
+  "5": {
+    "name": "US-AR"
+  },
+  "6": {
+    "name": "US-CA"
+  },
+  "8": {
+    "name": "US-CO"
+  },
+  "9": {
+    "name": "US-CT"
+  },
+  "10": {
+    "name": "US-DE"
+  },
+  "11": {
+    "name": "US-DC"
+  },
+  "12": {
+    "name": "US-FL"
+  },
+  "13": {
+    "name": "US-GA"
+  },
+  "15": {
+    "name": "US-HI"
+  },
+  "16": {
+    "name": "US-ID"
+  },
+  "17": {
+    "name": "US-IL"
+  },
+  "18": {
+    "name": "US-IN"
+  },
+  "19": {
+    "name": "US-IA"
+  },
+  "20": {
+    "name": "US-KS"
+  },
+  "21": {
+    "name": "US-KY"
+  },
+  "22": {
+    "name": "US-LA"
+  },
+  "23": {
+    "name": "US-ME"
+  },
+  "24": {
+    "name": "US-MD"
+  },
+  "25": {
+    "name": "US-MA"
+  },
+  "26": {
+    "name": "US-MI"
+  },
+  "27": {
+    "name": "US-MN"
+  },
+  "28": {
+    "name": "US-MS"
+  },
+  "29": {
+    "name": "US-MO"
+  },
+  "30": {
+    "name": "US-MT"
+  },
+  "31": {
+    "name": "US-NE"
+  },
+  "32": {
+    "name": "US-NV"
+  },
+  "33": {
+    "name": "US-NH"
+  },
+  "34": {
+    "name": "US-NJ"
+  },
+  "35": {
+    "name": "US-NM"
+  },
+  "36": {
+    "name": "US-NY"
+  },
+  "37": {
+    "name": "US-NC"
+  },
+  "38": {
+    "name": "US-ND"
+  },
+  "39": {
+    "name": "US-OH"
+  },
+  "40": {
+    "name": "US-OK"
+  },
+  "41": {
+    "name": "US-OR"
+  },
+  "42": {
+    "name": "US-PA"
+  },
+  "44": {
+    "name": "US-RI"
+  },
+  "45": {
+    "name": "US-SC"
+  },
+  "46": {
+    "name": "US-SD"
+  },
+  "47": {
+    "name": "US-TN"
+  },
+  "48": {
+    "name": "US-TX"
+  },
+  "49": {
+    "name": "US-UT"
+  },
+  "50": {
+    "name": "US-VT"
+  },
+  "51": {
+    "name": "US-VA"
+  },
+  "53": {
+    "name": "US-WA"
+  },
+  "54": {
+    "name": "US-WV"
+  },
+  "55": {
+    "name": "US-WI"
+  },
+  "56": {
+    "name": "US-WY"
+  }
+}

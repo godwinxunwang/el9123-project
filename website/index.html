@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Crime Data Analysis</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <script src="https://unpkg.com/ityped@0.0.5"></script>
+</head>
+<body>
+
+<div class="container">
+    <video loop muted autoplay poster="video/Ultra_Sunset/Ultra_Sunset.jpg" class="fullscreen-bg__video">
+        <source src="video/Ultra_Sunset/Ultra_Sunset.webm" type="video/webm">
+        <source src="video/Ultra_Sunset/Ultra_Sunset.mp4" type="video/mp4">
+        <source src="video/Ultra_Sunset/Ultra_Sunset.ogv" type="video/ogg">
+    </video>
+
+    <div class="text-container">
+        <div class="text">
+            <h1><strong><span id="ityped"></span></strong></h1>
+            <h3>EL-GY 9123 - Machine Learning - Project</h3>
+            <h3>New York University</h3>
+            <br>
+            <h3>Team members:
+            </h3>
+            <h3>Yang Shi, Xun Wang</h3>
+            <hr />
+
+            <p>Crime is one of the key problems that affect people's quality of life. What if we know
+                who is likely to commit a crime or which area potentially has a higher crime rate?
+                Here we use a few Machine Learning and Statistical techniques to analyze and predict crime rate in U.S. cities.
+            </p>
+            <p>One of the main issues that we are trying to address is how to utilize the <a href="http://archive.ics.uci.edu/ml/datasets/communities+and+crime">the open data</a> to quantitatively analyze
+            the factors which could potentially impact on our predictive models. Our challenges including </p>
+            <strong>
+                <ol>
+                    <li>What are the core factors that determines the crime rate in a certain U.S. community?</li>
+                    <li>Which machine learning approach should we use to train our model? </li>
+                    <li>How can we tell our trained model performs well?</li>
+                </ol>
+            </strong>
+            <br>
+            <a type="button" class="btn btn-success btn-lg" href="map.html">View result map</a>
+            <a type="button" class="btn btn-danger btn-lg" href="chart.html">See data chart</a>
+        </div>
+    </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+<script>
+    ityped.init('#ityped', {
+        strings:['U.S. Crime Data Analysis and Prediction'],
+        typeSpeed: 200,
+        backSpeed: 0,
+        startDelay: 300,
+        backDelay: 1500, //default
+        loop: false
+    });
+</script>
+
+</body>
+</html>
